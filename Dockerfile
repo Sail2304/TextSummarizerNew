@@ -4,7 +4,7 @@ COPY . /app
 
 RUN apt-get update -y && apt-get install awscli  libpq-dev build-essential git p7zip p7zip-full -y 
 
-RUN 7z a artifacts/model_trainer/pegasus-samsum-model.7z
+RUN unzip artifacts/model_trainer/pegasus-samsum-model.zip
 
 RUN pip install --no-cache-dir -r requirements1.txt
 
